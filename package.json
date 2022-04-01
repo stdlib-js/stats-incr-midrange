@@ -1,0 +1,40 @@
+{
+  "name": "@stdlib/stats-incr-midrange",
+  "version": "0.0.0",
+  "description": "Compute a mid-range incrementally.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "main": "./mod.js",
+  "homepage": "https://stdlib.io",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/stdlib-js/stats-incr-midrange.git"
+  },
+  "bugs": {
+    "url": "https://github.com/stdlib-js/stdlib/issues"
+  },
+  "keywords": [
+    "stdlib",
+    "stdmath",
+    "statistics",
+    "stats",
+    "mathematics",
+    "math",
+    "maximum",
+    "max",
+    "minimum",
+    "min",
+    "mid",
+    "range",
+    "mid-range",
+    "mid-extreme",
+    "mean",
+    "central tendency",
+    "incremental",
+    "accumulator"
+  ],
+  "funding": {
+    "type": "patreon",
+    "url": "https://www.patreon.com/athan"
+  }
+}
