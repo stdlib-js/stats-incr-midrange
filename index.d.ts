@@ -1,7 +1,7 @@
-/**
+/*
 * @license Apache-2.0
 *
-* Copyright (c) 2018 The Stdlib Authors.
+* Copyright (c) 2019 The Stdlib Authors.
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -16,21 +16,27 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 2.0
 
-// MODULES //
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@esm/index.d.ts"/>
 
-var PINF = require( '@stdlib/constants-float64-pinf' );
-var NINF = require( '@stdlib/constants-float64-ninf' );
-var isnan = require( '@stdlib/math-base-assert-is-nan' );
-
-
-// MAIN //
+/**
+* If provided a value, returns an updated mid-range; otherwise, returns the current mid-range.
+*
+* ## Notes
+*
+* -   The mid-range is the arithmetic mean of maximum and minimum values. Accordingly, the mid-range is the midpoint of the range and a measure of central tendency.
+* -   If provided `NaN` or a value which, when used in computations, results in `NaN`, the accumulated value is `NaN` for all future invocations.
+*
+* @param x - value
+* @returns mid-range
+*/
+type accumulator = ( x?: number ) => number | null;
 
 /**
 * Returns an accumulator function which incrementally computes a mid-range.
 *
-* @returns {Function} accumulator function
+* @returns accumulator function
 *
 * @example
 * var accumulator = incrmidrange();
@@ -50,43 +56,9 @@ var isnan = require( '@stdlib/math-base-assert-is-nan' );
 * midrange = accumulator();
 * // returns 2.55
 */
-function incrmidrange() {
-	var max = NINF;
-	var min = PINF;
-	var sum;
-
-	return accumulator;
-
-	/**
-	* If provided a value, the accumulator function returns an updated mid-range. If not provided a value, the accumulator function returns the current mid-range.
-	*
-	* @private
-	* @param {number} [x] - new value
-	* @returns {number} mid-range
-	*/
-	function accumulator( x ) {
-		if ( arguments.length === 0 ) {
-			if ( sum === void 0 ) {
-				return null;
-			}
-			return sum / 2.0;
-		}
-		if ( isnan( x ) ) {
-			min = x;
-			max = x;
-		}
-		if ( x > max ) {
-			max = x;
-		}
-		if ( x < min ) {
-			min = x;
-		}
-		sum = max + min;
-		return sum / 2.0;
-	}
-}
+declare function incrmidrange(): accumulator;
 
 
 // EXPORTS //
 
-module.exports = incrmidrange;
+export = incrmidrange;
