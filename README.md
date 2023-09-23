@@ -50,7 +50,7 @@ The [**mid-range**][mid-range], or **mid-extreme**, is the arithmetic mean of ma
 ## Usage
 
 ```javascript
-import incrmidrange from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-incr-midrange@deno/mod.js';
+import incrmidrange from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-incr-midrange@v0.1.0-deno/mod.js';
 ```
 
 #### incrmidrange()
@@ -106,7 +106,7 @@ midrange = accumulator();
 
 ```javascript
 import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@deno/mod.js';
-import incrmidrange from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-incr-midrange@deno/mod.js';
+import incrmidrange from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-incr-midrange@v0.1.0-deno/mod.js';
 
 var accumulator;
 var v;
