@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/stats-incr-midrange",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Compute a mid-range incrementally.",
   "license": "Apache-2.0",
   "author": {
@@ -38,8 +38,8 @@
   },
   "dependencies": {
     "@stdlib/constants-float64-ninf": "^0.1.0",
-    "@stdlib/constants-float64-pinf": "^0.1.0",
-    "@stdlib/math-base-assert-is-nan": "^0.1.0",
+    "@stdlib/constants-float64-pinf": "^0.1.1",
+    "@stdlib/math-base-assert-is-nan": "^0.1.1",
     "@stdlib/types": "^0.1.0"
   },
   "devDependencies": {
